@@ -8,7 +8,7 @@ pipeline {
                     git branch: 'master',
                         url: 'https://github.com/sugandh1611/jenkins-maven-sample-app.git'
                     
-                    echo '$pwd()'
+                    pwd()
 
             }
             
