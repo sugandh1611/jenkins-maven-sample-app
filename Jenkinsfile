@@ -14,7 +14,7 @@ pipeline {
         
         stage ('Testing dir '){
             steps {
-                dir('/home/vagrant'){
+                dir("/home/vagrant"){
                     sh 'pwd'
                     sh 'touch sp-test'
                 }
@@ -24,7 +24,7 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                dir('/home/jenkins/ /home/jenkins/ /home/jenkins/workspace/maven-app'){
+                dir("/home/jenkins/ /home/jenkins/ /home/jenkins/workspace/maven-app"){
                     sh 'pwd'
                     sh 'mvn package'
                 }    
