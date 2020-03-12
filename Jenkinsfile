@@ -5,8 +5,8 @@ pipeline {
         stage('Clone sources') {
             
             steps {
-                    git branch: 'master',
-                        url: 'https://github.com/sugandh1611/jenkins-maven-sample-app.git'
+                    git branch: '${git_branch}',
+                        url: '${git_url}'
                     
                     sh 'pwd'
             }
@@ -17,21 +17,21 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                    sh 'mvn package'
+                    sh '${compile}'
             }
         }
 
         stage ('Testing Stage') {
 
             steps {
-                    sh 'mvn test'
+                    sh '${test}'
             }
         }
 
 
         stage ('Deployment Stage') {
             steps {
-                    sh 'java -cp target/*.jar helloworld.HelloWorld'
+                    sh '${deploy}'
             }
         }
     }
