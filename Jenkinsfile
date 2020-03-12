@@ -14,7 +14,7 @@ pipeline {
         
         stage ('Testing dir '){
             steps {
-                dir('/home/vagrant/'){
+                dir('/home/vagrant'){
                     sh 'pwd'
                     sh 'touch sp-test'
                 }
