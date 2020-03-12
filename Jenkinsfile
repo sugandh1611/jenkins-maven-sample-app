@@ -24,8 +24,10 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
+                dir('/home/jenkins/ /home/jenkins/ /home/jenkins/workspace/maven-app'){
                     sh 'pwd'
-                    sh 'mvn package'
+                    sh 'mvn package
+                }    
             }
         }
 
