@@ -8,12 +8,22 @@ pipeline {
                     git branch: 'master',
                         url: 'https://github.com/sugandh1611/jenkins-maven-sample-app.git'
                     
-                    sh 'pwd'
+                    echo '$pwd()'
+
             }
             
     
         }
         
+        stage ('Testing dir '){
+            steps {
+                dir('/home/vagrant/'){
+                    sh 'touch sp-test'
+                }
+                sh 'pwd'
+            }
+        
+        }
         stage ('Compile Stage') {
 
             steps {
