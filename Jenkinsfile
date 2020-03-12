@@ -6,7 +6,7 @@ pipeline {
             
             steps {
                     git branch: 'master',
-                        url: 'https://github.com/sugandh16/maven-sample.git'
+                        url: 'https://github.com/sugandh1611/jenkins-maven-sample-app.git'
                     
                     sh 'pwd'
             }
