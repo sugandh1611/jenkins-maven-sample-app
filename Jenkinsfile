@@ -5,7 +5,7 @@ pipeline {
         stage('Clone sources') {
             
             steps {
-                    git branch: 'master',
+                    git branch: 'b1',
                         url: 'https://github.com/sugandh1611/jenkins-maven-sample-app.git'
                     
                     sh 'pwd'
